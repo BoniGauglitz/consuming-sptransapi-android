@@ -95,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
         service.getBusLines(etBusLine.getText().toString()).enqueue(new Callback<List<Line>>() {
             @Override
             public void onResponse(Response<List<Line>> response, Retrofit retrofit) {
-
                 tvResponse.setText("");
                 for (Line line : response.body()) {
                     if (line.Sentido == 1)
